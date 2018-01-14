@@ -68,7 +68,7 @@ class NewsController extends Controller
         if (move_uploaded_file($_FILES['card_img']['tmp_name'], $uploadfile)) {
             $news->img_path = '/img/' . $_FILES['card_img']['name'];
         } else {
-            $news->img_path = '/img/' . '300.png';
+            $news->img_path = '';
         }
         $news->save();
         return response($news);
