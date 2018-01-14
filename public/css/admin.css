@@ -93,15 +93,15 @@ main {
 @media (max-width: 400px) {
 
     #true_icon {
-         width: 65px;!important;
-         height: 65px;!important;
+         width: 62px;!important;
+         height: 62px;!important;
      }
     #fake_icon {
-        width: 65px;!important;
-        height: 65px;!important;
+        width: 62px;!important;
+        height: 62px;!important;
     }
 
-    .news_icon {
+    #news_icon {
         font-size: 10pt;!important;
     }
 }
@@ -114,6 +114,10 @@ main {
     #fake_icon {
         width: 80px;!important;
         height: 80px;!important;
+    }
+
+    .news_icon {
+        font-size: 16pt;!important;
     }
 }
 

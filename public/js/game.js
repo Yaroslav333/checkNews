@@ -16,7 +16,7 @@ $(document).ready(function () {
 
     draggie.on( 'dragMove', function( event, pointer, moveVector ) {
 
-        if(draggie.position.x >= -350 && draggie.position.x <= 350){
+        if(draggie.position.x >= -200 && draggie.position.x <= 200){
             if (draggie.position.x < 0) {
                 $('#fake_icon').show();
                 $('#true_icon').hide();
@@ -28,14 +28,14 @@ $(document).ready(function () {
                 $('#true_icon').hide();
             }
             draggie.position.x = 0;
-        } else if(draggie.position.x < -350) {
+        } else if(draggie.position.x < -200) {
             if(dragStop){
                 fakeNewsCheck();
                 dragStop = false;
             }
             draggie.position.x = 0;
 
-        } else if (draggie.position.x > 350) {
+        } else if (draggie.position.x > 200) {
             if(dragStop){
                 trueNewsChek();
                 dragStop = false;

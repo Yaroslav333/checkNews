@@ -156,13 +156,11 @@ $(document).ready(function () {
                 cache: false,
                 processData:false,
                 success: function(data){
-                    console.log(data);
-                    if (data.error !== null) {
+                    if (data.error !== undefined) {
                         Materialize.toast(data.error, 4000);
                     } else {
                         window.location = "/admin/users";
                     }
-
                 },
 
 
