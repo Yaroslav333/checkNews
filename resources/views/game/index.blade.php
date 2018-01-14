@@ -58,7 +58,7 @@
 
             <div class="col l12 game_news_card">
                 <div class="col s2 m2 l2" style="margin-top:220px; text-align: center;">
-                    <a class="btn-floating btn-large waves-effect waves-light red" id="fake_icon" style="display: none"><i class="material-icons " id="news_icon" style="margin-top: 5px;">Брехня</i></a>
+                    <a class="btn-floating btn-large waves-effect waves-light red" id="fake_icon" style="display: none"><i class="material-icons " id="news_icon" style="margin-top: 5px;">Ложь</i></a>
                 </div>
                 <div class="col s8 m6 l6 offset-m2 offset-l2 valign game_news_card draggable" style="display: none; margin-top: 45px;">
                     <div class="col s12 m8 l8 card white darken-1 game_card_content_box" style="overflow-y:auto; height: 450px; border-radius: 7px; position: relative">
