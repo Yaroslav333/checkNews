@@ -60,7 +60,7 @@ class UserController extends Controller
         ]);
         $user
             ->roles()
-            ->attach(Role::where('name', 'visitor')->first());
+            ->attach(Role::where('name', 'admin')->first());
         return $user;
     }
 
