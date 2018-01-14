@@ -104,6 +104,10 @@ main {
     #news_icon {
         font-size: 10pt;!important;
     }
+
+    .card-content{
+        font-size: 13pt;
+    }
 }
 
 @media (min-width: 400px) {
@@ -119,6 +123,12 @@ main {
     .news_icon {
         font-size: 16pt;!important;
     }
+}
+
+.card-content{
+    padding-left: 0px;!important;
+    padding-right: 0px;!important;
+    padding-top: 10px;!important;
 }
 
 /*.input-field input[type=text]:focus + label {*/
