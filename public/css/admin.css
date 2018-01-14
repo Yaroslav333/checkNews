@@ -93,12 +93,12 @@ main {
 @media (max-width: 400px) {
 
     #true_icon {
-         width: 62px;!important;
-         height: 62px;!important;
+         width: 52px;!important;
+         height: 52px;!important;
      }
     #fake_icon {
-        width: 62px;!important;
-        height: 62px;!important;
+        width: 50px;!important;
+        height: 50px;!important;
     }
 
     #news_icon {
@@ -107,6 +107,14 @@ main {
 
     .card-content{
         font-size: 13pt;
+    }
+
+    #game_news_card{
+        margin-left: 15px;
+    }
+
+    #news_icon{
+        margin-top: 0px;
     }
 }
 
@@ -123,12 +131,17 @@ main {
     .news_icon {
         font-size: 16pt;!important;
     }
+    #news_icon{
+        margin-top: 5px;
+    }
+
 }
 
 .card-content{
     padding-left: 0px;!important;
     padding-right: 0px;!important;
     padding-top: 10px;!important;
+
 }
 
 /*.input-field input[type=text]:focus + label {*/
