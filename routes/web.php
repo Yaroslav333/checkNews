@@ -25,6 +25,9 @@ Route::get('/game/get-news', 'GameController@getNews');
 Auth::routes();
 
 //Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', function () {
+    return redirect('/');
+});
 
 Route::get('/admin', 'AdminController@index');
 Route::post('/admin/news/{id}', 'NewsController@updateNews');
