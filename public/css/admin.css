@@ -1,0 +1,123 @@
+
+.admin-nav{
+    background-color: #2b2d34;@important;
+}
+
+.nav-items a{
+    color: #ff8905;
+}
+
+.page-footer{
+    background-color: #2e3f48;@important;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background: #dadada;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.page-footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+}
+
+.logo{
+    margin-left: 5px;
+    margin-top: 6px;
+}
+
+.rightimg  {
+    float: right; /* Выравнивание по правому краю  */
+    margin: 7px 0 7px 7px; /* Отступы вокруг картинки */
+    width: 40%;
+}
+
+.news_box_index :hover{
+    top: +4px;
+}
+
+.news_box_index :active{
+    top: +2px;
+}
+
+.container  {
+    display: flex;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.container .row {
+    margin: 0 auto;
+}
+
+#game-card-body{
+    -webkit-user-select: none;!important;
+    /* user-select -- это нестандартное свойство */
+
+    -moz-user-select: none;!important;
+    /* поэтому нужны префиксы */
+
+    -ms-user-select: none;!important;
+}
+
+#game-card-title{
+    -webkit-user-select: none;!important;
+    /* user-select -- это нестандартное свойство */
+
+    -moz-user-select: none;!important;
+    /* поэтому нужны префиксы */
+
+    -ms-user-select: none;!important;
+}
+
+@media only screen and (min-width: 1000px) {
+    .game_card_content_box { }
+}
+
+.mb20{
+    margin-bottom: 20px;
+}
+
+
+@media (max-width: 400px) {
+
+    #true_icon {
+         width: 65px;!important;
+         height: 65px;!important;
+     }
+    #fake_icon {
+        width: 65px;!important;
+        height: 65px;!important;
+    }
+
+    .news_icon {
+        font-size: 10pt;!important;
+    }
+}
+
+@media (min-width: 400px) {
+    #true_icon {
+        width: 80px;!important;
+        height: 80px;!important;
+    }
+    #fake_icon {
+        width: 80px;!important;
+        height: 80px;!important;
+    }
+}
+
+/*.input-field input[type=text]:focus + label {*/
+    /*border-bottom: 1px solid  #ff8905;@important;*/
+    /*box-shadow: 0 1px 0 0 #ff8905;@important;*/
+/*}*/
