@@ -21,7 +21,9 @@
 <div id="app">
     <nav class="admin-nav">
         <div class="nav-wrapper">
-            <img class="logo" src="https://scontent.fhrk2-1.fna.fbcdn.net/v/t1.0-1/p50x50/11013362_1819892258235113_4920060360726235962_n.png?oh=60d18a026846a77e356266f8d0ce0d7c&amp;oe=5ABC5DD9" alt="" aria-label="Громадське Харків Hromadske.kh" role="img">
+            <a href="/">
+                <img class="logo" src="https://scontent.fhrk2-1.fna.fbcdn.net/v/t1.0-1/p50x50/11013362_1819892258235113_4920060360726235962_n.png?oh=60d18a026846a77e356266f8d0ce0d7c&amp;oe=5ABC5DD9" alt="" aria-label="Громадське Харків Hromadske.kh" role="img">
+            </a>
 
             <a href="#" class="brand-logo center game-counter"></a>
             {{--<ul class="right hide-on-med-and-down nav-items">

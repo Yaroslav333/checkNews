@@ -13,11 +13,11 @@
         {{ csrf_field() }}
     <div class="row">
         <div class="input-field col s12">
-            <input value="" name="card-title-input" id="card-title-input" type="text" class="validate" required>
+            <input value="" name="card-title-input" id="card-title-input" type="text" class="validate">
             <label class="active" for="first_name2">Название</label>
         </div>
         <div class="input-field col s12">
-            <textarea id="card-body-input" class="materialize-textarea" name="card-body-input" required></textarea>
+            <textarea id="card-body-input" class="materialize-textarea" name="card-body-input"></textarea>
             <label for="textarea1">Содержание</label>
         </div>
         <div class="file-field input-field col s12">
@@ -31,7 +31,7 @@
             </div>
         </div>
         <div class="input-field col s12">
-            <input value="" id="card-source-input" name="card-source-input" type="text" class="validate" required>
+            <input value="" id="card-source-input" name="card-source-input" type="text" class="validate">
             <label class="active" for="source">Ссылка на Источник</label>
         </div>
 
@@ -59,11 +59,11 @@
     </form>
 
         <div class="col s6">
-            <div class="col s12 m7 card white darken-1" style="overflow-y:auto; height:400px;border-radius: 7px; position: relative">
+            <div class="col s12 m12 card white darken-1" style="overflow-y:auto; max-height:400px; min-height: 400px;border-radius: 7px; position: relative">
                 <div class="card-content">
                     <div class="" style="word-wrap:break-word">
                         <h5 class="" id="card-title"></h5>
-                        <p><img id="card-img" src="" alt="" class="rightimg" style="display: none">
+                        <p><img id="card-img" src="" alt="" class="rightimg" style="display: none; width: 100%;">
                             <p id="card-body"></p>
                         </p>
                     </div>

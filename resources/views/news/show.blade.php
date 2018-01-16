@@ -10,12 +10,12 @@
 @section('content')
     <div class="row" style="margin-top: 20px;">
         <div class="col s6">
-            <div class="col s12 m7 card white darken-1" style="overflow-y:auto; height:400px;border-radius: 7px; position: relative">
+            <div class="col s12 m12 card white darken-1" style="overflow-y:auto; max-height:400px; min-height: 400px;border-radius: 7px; position: relative">
                 <div class="card-content">
 
                     <div class="" style="word-wrap:break-word">
                         <h5 class="" id="card-title">{{$news->title}}</h5>
-                        <p><img id="card-img" src="{{$news->img_path}}" alt="" class="rightimg">
+                        <p><img id="card-img" src="/newsimg/{{ $news->img_path }}" alt="" class="rightimg">
                         <p id="card-body">{{$news->body}}</p>
                         </p>
                     </div>

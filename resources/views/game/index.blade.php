@@ -27,7 +27,7 @@
                         ,если считаете, что новость правдива.
                         </p><br>
                         <p>Перетащите карточку с новостью влево или нажмите на кнопку
-                            <a class="btn-floating btn-large waves-effect waves-light red" id=""><i class="material-icons">clear</i></a>
+                            <a class="btn-floating btn-large waves-effect waves-light red" id="" style="margin-left: 10px;"><i class="material-icons">clear</i></a>
                             ,если считаете, что новость фейковая.
                         </p>
                     </div>
@@ -44,24 +44,27 @@
                         <span class="card-title">Тест окончен</span>
                         <p id="game-result"></p>
                     </div>
-                    <div class="card-action">
-                        <div>
+                    <div class="card-action col s12 m12 l12">
+                        <div style="text-align: center">
                             <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false" data-size="large">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                         </div>
-                        <div>
+                        <div style="text-align: center">
                             <div class="fb-share-button" data-href="" data-layout="button" data-size="large" data-mobile-iframe="false"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Поделиться</a></div>
+                        </div>
+                        <div class="right" style="margin-top: 10px;">
+                          <a href="/" onclick="location.reload()" style="margin-right: 0px;"><i class="small material-icons">refresh</i></a>
                         </div>
                     </div>
                 </div>
             </div>
 
 
-            <div class="col l12 game_news_card">
+            <div class="col s12 m12 l12 game_news_card">
                 <div class="col s1 m2 l2" style="margin-top:220px; text-align: center;">
                     <a class="btn-floating btn-large waves-effect waves-light red" id="fake_icon" style="display: none"><i class="material-icons " id="news_icon" style="line-height: 0px;">Ложь</i></a>
                 </div>
-                <div class="col s9 m6 l6 offset-m2 offset-l2 valign game_news_card draggable" id="game_news_card" style="display: none; margin-top: 45px;padding-right: 0px;padding-left: 0px;">
-                    <div class="col s12 m8 l8 card white darken-1 game_card_content_box" style="overflow-y:auto; height: 450px; border-radius: 7px; position: relative">
+                <div class="col s9 m6 l6 offset-m1 offset-l1 valign game_news_card draggable" id="game_news_card" style="display: none; margin-top: 45px;padding-right: 0px;padding-left: 0px;">
+                    <div class="col s12 m12 l12 card white darken-1 game_card_content_box" style="overflow-y:auto; height: 400px; border-radius: 7px; position: relative">
                         <div class="card-content " style="padding-left: 0px;padding-right: 0px;padding-top: 10px;">
                             <div class="" style="word-wrap:break-word">
                                 <h5 class="" id="game-card-title"></h5>
@@ -75,7 +78,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col s1 m2 l2" style="margin-top:220px;text-align: center;padding-left: 0px;">
+                <div class="col s1 m2 l2 offset-m1 offset-l1" style="margin-top:220px;text-align: center;padding-left: 0px;">
                     <a class="btn-floating btn-large waves-effect waves-light green" id="true_icon" style="display: none"><i class="material-icons" id="news_icon" style="line-height: 0px;">Правда</i></a>
                 </div>
             </div>

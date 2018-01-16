@@ -22,6 +22,11 @@ Route::get('/register', function () {
 Route::get('/', 'GameController@index');
 Route::get('/game/get-news', 'GameController@getNews');
 
+Route::get('newsimg/public/{image}', [
+    'uses'      => 'NewsController@newsCardImage'
+]);
+
+
 Auth::routes();
 
 //Route::get('/home', 'HomeController@index')->name('home');

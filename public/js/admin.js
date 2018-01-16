@@ -5,11 +5,27 @@ $(document).ready(function () {
 
     $('#card-body-input').on('change keyup input', function () {
         $('#card-body').text($(this).val());
+
+        if ($(this).val() == "" || $(this).val() == null) {
+            $('.rightimg').css('width', '100%');
+        } else {
+           // $('.rightimg').css('width', '40%');
+        }
+
     });
 
     $('#card-source-input').on('change keyup input', function () {
-        $('#card-source').text('Ссылка на источник');
-        $('#card-source').attr('href', 'http://' + $(this).val());
+
+        if ($('#card-source-input').val() != '' && $('#card-source-input').val() != null) {
+            $('#card-source').attr('href', 'http://' + $(this).val());
+            $('#card-source').text( $(this).val());
+        } else {
+            $('#card-source').attr('href', '');
+            $('#card-source').text( '' );
+        }
+
+        //
+
     });
 
     $("#card-img-input").on('change', function () {
@@ -59,8 +75,7 @@ $(document).ready(function () {
             cache: false,
             processData:false,
             success: function(data){
-                window.location = "/admin/news/" + data.id;
-
+               window.location = "/admin/news/" + data.id;
             },
 
 

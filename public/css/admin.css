@@ -36,9 +36,9 @@ main {
 }
 
 .rightimg  {
-    float: right; /* Выравнивание по правому краю  */
-    margin: 7px 0 7px 7px; /* Отступы вокруг картинки */
-    width: 40%;
+    margin: 7px 0px 7px 7px; /* Отступы вокруг картинки */
+    width: 100%;
+
 }
 
 .news_box_index :hover{
@@ -90,7 +90,7 @@ main {
 }
 
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
 
     #true_icon {
          width: 48px;!important;
@@ -118,7 +118,7 @@ main {
     }
 }
 
-@media (min-width: 400px) {
+@media (min-width: 600px) {
     #true_icon {
         width: 80px;!important;
         height: 80px;!important;

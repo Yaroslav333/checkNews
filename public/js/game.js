@@ -91,7 +91,16 @@ $(document).ready(function () {
             setItem(data[index]);
             $('#game-card-title').text(data[index].title);
             $('#game-card-body').text(data[index].body);
-            $('#game-card-img').attr('src', data[index].img_path);
+            $('#game-card-img').attr('src', '/newsimg/' + data[index].img_path);
+
+            console.log(data[index]);
+
+            if (data[index].body == "" || data[index].body == null) {
+                $('.rightimg').css('width', '100%');
+            } else {
+               // $('.rightimg').css('width', '40%');
+            }
+
             $('#game-card-img').show();
             $('#game-card-source').text(data[index].source);
             $('#game-card-source').attr('href', data[index].source);
