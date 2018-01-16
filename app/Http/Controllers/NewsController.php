@@ -213,7 +213,7 @@ class NewsController extends Controller
 
     public function newsCardImage($image)
     {
-        dd(1);
+        dd(Image::make('storage' . '/' . $image)->response());
         return Image::make('storage' . '/' . $image)->response();
     }
 }
