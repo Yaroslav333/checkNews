@@ -3,12 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\News;
-use Intervention\Image\Facades\Image;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use League\Flysystem\Exception;
+use Intervention\Image\Facades\Image;
 
 class NewsController extends Controller
 {
@@ -214,7 +214,7 @@ class NewsController extends Controller
     public function newsCardImage($image)
     {
         try {
-            Image::make('storage' . '/' . $image)->response();
+            return Image::make('storage' . '/' . $image)->response();
         } catch(\Exception $e) {
             echo "<pre>";
             echo $e;
