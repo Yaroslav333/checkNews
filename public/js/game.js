@@ -93,8 +93,6 @@ $(document).ready(function () {
             $('#game-card-body').text(data[index].body);
             $('#game-card-img').attr('src', '/newsimg/' + data[index].img_path);
 
-            console.log(data[index]);
-
             if (data[index].body == "" || data[index].body == null) {
                 $('.rightimg').css('width', '100%');
             } else {
