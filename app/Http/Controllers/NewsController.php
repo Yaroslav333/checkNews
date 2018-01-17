@@ -227,6 +227,7 @@ class NewsController extends Controller
 
 
         try {
+            dd(Storage::get(Storage::url('zFi0mS4NT3klbCx7VQ9oLyxTsY0AWoaHkOs2NZWS.jpeg')));
             //dd( Storage::url('zFi0mS4NT3klbCx7VQ9oLyxTsY0AWoaHkOs2NZWS.jpeg'));
             //dd(scandir('/app/storage/app/public'));
             //return Image::make(public_path('storage/' . $image))->response();
@@ -235,6 +236,6 @@ class NewsController extends Controller
             echo $e;
             echo "</pre>";
         }
-        return Image::make(Storage::url('zFi0mS4NT3klbCx7VQ9oLyxTsY0AWoaHkOs2NZWS.jpeg'))->response();
+        return Image::make('/storage' . '/' . $image)->response();
     }
 }
