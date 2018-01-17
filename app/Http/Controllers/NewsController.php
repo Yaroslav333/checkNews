@@ -104,7 +104,7 @@ class NewsController extends Controller
 
         $news = News::findOrFail($id);
         if ($news->img_path) {
-            $img = $contents = Storage::get($news->img_path);
+            //$img = Storage::get($news->img_path);
         } else {
             $img = null;
         }
