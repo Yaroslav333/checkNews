@@ -64,7 +64,7 @@
                 <div class="card-content">
                     <div class="" style="word-wrap:break-word">
                         <h5 class="" id="card-title">{{$news->title}}</h5>
-                        <div class="col s12 m12 l12"><img id="card-img" src="/newsimg/{{ $news->img_path }}" alt="" class="rightimg"></div>
+                        <div class="col s12 m12 l12"><img id="card-img" src="{{ $img }}" alt="" class="rightimg"></div>
                         <p id="card-body">{{$news->body}}</p>
                     </div>
                 </div>
