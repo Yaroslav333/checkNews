@@ -113,7 +113,7 @@ class NewsController extends Controller
             dd($e);
         }
 
-        dd($news);
+        dd($img);
         return view('news.show', ['news' => $news, 'img' => $img]);
     }
 
