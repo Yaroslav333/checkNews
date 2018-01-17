@@ -104,17 +104,18 @@ class NewsController extends Controller
 
         $news = News::findOrFail($id);
         try{
-            $img = Storage::get($news->img_path);
 
-            /*if ($news->img_path) {
+            if ($news->img_path) {
+
+                $img = Storage::get($news->img_path);
+
             } else {
                 $img = null;
-            }*/
+            }
         } catch (Exception $e) {
             dd($e);
         }
 
-        dd($img);
         return view('news.show', ['news' => $news, 'img' => $img]);
     }
 
@@ -221,12 +222,12 @@ class NewsController extends Controller
     public function newsCardImage($image)
     {
         try {
-            return Image::make($image)->response();
+            return Image::make('storage' . '/' . $image)->response();
         } catch(\Exception $e) {
             echo "<pre>";
             echo $e;
             echo "</pre>";
         }
-        return Image::make( $image)->response();
+        return Image::make('storage' . '/' . $image)->response();
     }
 }
