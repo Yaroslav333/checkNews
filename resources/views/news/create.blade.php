@@ -63,7 +63,7 @@
                 <div class="card-content">
                     <div class="" style="word-wrap:break-word">
                         <h5 class="" id="card-title"></h5>
-                        <p><img id="card-img" src="" alt="" class="rightimg" style="display: none; width: 100%;">
+                        <p><img id="card-img" src="{{$img}}" alt="" class="rightimg" style="display: none; width: 100%;">
                             <p id="card-body"></p>
                         </p>
                     </div>

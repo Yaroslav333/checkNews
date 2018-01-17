@@ -22,7 +22,7 @@
                                 <div class="card-content ">
                                     <div class="" style="word-wrap:break-word">
                                         <h5 class="" id="card-title">{{$item->title}}</h5>
-                                        <p><img id="card-img" src="" alt="" class="rightimg">
+                                        <p><img id="card-img" src="{{$item->img_path}}" alt="" class="rightimg">
                                         <p id="card-body">{{$item->body}}</p>
                                         </p>
                                     </div>

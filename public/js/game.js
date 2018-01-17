@@ -91,7 +91,7 @@ $(document).ready(function () {
             setItem(data[index]);
             $('#game-card-title').text(data[index].title);
             $('#game-card-body').text(data[index].body);
-            $('#game-card-img').attr('src', '/newsimg/' + data[index].img_path);
+            $('#game-card-img').attr('src', data[index].img_path);
 
             if (data[index].body == "" || data[index].body == null) {
                 $('.rightimg').css('width', '100%');

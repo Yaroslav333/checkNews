@@ -6,16 +6,17 @@
     "type": "project",
     "require": {
         "php": ">=7.0.0",
+        "ext-gd": "*",
         "doctrine/dbal": "^2.6",
         "fideloper/proxy": "~3.3",
         "guzzlehttp/guzzle": "^6.3",
         "intervention/image": "^2.4",
         "laravel/framework": "5.5.*",
         "laravel/tinker": "~1.0",
+        "league/flysystem-aws-s3-v3": "^1.0",
         "phpmailer/phpmailer": "^6.0",
         "swiftmailer/swiftmailer": "^6.0",
-        "watson/breadcrumbs": "^1.0",
-        "ext-gd": "*"
+        "watson/breadcrumbs": "^1.0"
     },
     "require-dev": {
         "filp/whoops": "~2.0",

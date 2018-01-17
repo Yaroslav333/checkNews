@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use League\Flysystem\Exception;
 use Intervention\Image\Facades\Image;
+use Illuminate\Contracts\Filesystem\Filesystem;
 
 class NewsController extends Controller
 {
@@ -29,9 +30,11 @@ class NewsController extends Controller
     public function index()
     {
         Auth::user()->authorizeRoles(['admin']);
-        return view('news.index', ['news' => News::all()]);
-
-        ///newsimg/{{ $news->img_path }}
+        $news =  News::all();
+        foreach ($news as $row) {
+            $row->img_path = isset($row->img_path) && !empty($row->img_path) ? Storage::disk('s3')->url($row->img_path) : null;
+        }
+        return view('news.index', ['news' => $news]);
     }
 
     /**
@@ -66,26 +69,17 @@ class NewsController extends Controller
         $news->is_true = $request->input('is_true') == 'on' ? 1 : 0;
         $news->active = $request->input('active_news') == 'on' ? 1 : 0;
 
-        $img = Image::make($request->file('card_img')->getRealPath());
-
-
         if($request->file('card_img')) {
-            $path = $request->file('card_img')->store('public');
-            return $path;
-            $news->img_path = $path;
+            $image = $request->file('card_img');
+            $imageFileName = time() . '.' . $image->getClientOriginalExtension();
+
+            $s3 = Storage::disk('s3');
+            $filePath = $imageFileName;
+            $s3->put($filePath, file_get_contents($image), 'public');
+            $news->img_path = $filePath;
         } else {
             $news->img_path = null;
         }
-
-        /*$uploaddir =  '/storage/app/';
-        $uploadfile = $uploaddir . basename($_FILES['card_img']['name']);
-
-        if (move_uploaded_file($_FILES['card_img']['tmp_name'], $uploadfile)) {
-            $news->img_path = $_FILES['card_img']['name'];
-        } else {
-            $news->img_path = '';
-        }
-        $news->img_path = $_FILES['card_img']['name'];*/
 
         $news->save();
         return response($news);
@@ -107,18 +101,14 @@ class NewsController extends Controller
 
         $news = News::findOrFail($id);
         try{
-
-            if ($news->img_path) {
-
-                $img = Storage::get($news->img_path);
-
+            if ($news->img_path !== null) {
+                $img = Storage::disk('s3')->url($news->img_path);
             } else {
                 $img = null;
             }
         } catch (Exception $e) {
             dd($e);
         }
-
         return view('news.show', ['news' => $news, 'img' => $img]);
     }
 
@@ -135,8 +125,18 @@ class NewsController extends Controller
         if(!News::where('id', $id)->exists()) {
             abort(404);
         }
+        $news = News::findOrFail($id);
+        try{
+            if ($news->img_path !== null) {
+                $img = Storage::disk('s3')->url($news->img_path);
+            } else {
+                $img = null;
+            }
+        } catch (Exception $e) {
+            dd($e);
+        }
 
-        return view('news.edit', ['news' => News::findOrFail($id)]);
+        return view('news.edit', ['news' => $news, 'img' => $img]);
     }
 
     /**
@@ -161,27 +161,22 @@ class NewsController extends Controller
         ]);
 
         $news = [];
-        Auth::user()->authorizeRoles(['admin']);;
-
+        Auth::user()->authorizeRoles(['admin']);
 
         if(News::where('id', $request->input('news_id'))->exists()) {
             $img_path = News::where('id', $request->input('news_id'))->first()->img_path;
 
-            if($request->file('card_img')) {
-                $path = $request->file('card_img')->store('public');
-            } else {
-                $path =$img_path;
-            }
+                if($request->file('card_img')) {
+                    $image = $request->file('card_img');
+                    $imageFileName = time() . '.' . $image->getClientOriginalExtension();
 
-            /*if(isset($_FILES['card_img']['name']) && !empty($_FILES['card_img']['name'])) {
-                $uploaddir =  '../public/img/';
-                $uploadfile = $uploaddir . basename($_FILES['card_img']['name']);
-                if (move_uploaded_file($_FILES['card_img']['tmp_name'], $uploadfile)) {
-                    $img_path = '/img/' . $_FILES['card_img']['name'];
+                    $s3 = Storage::disk('s3');
+                    $filePath = $imageFileName;
+                    $s3->put($filePath, file_get_contents($image), 'public');
+                    $path = $filePath;
                 } else {
-                    $img_path = null;
+                    $path = $img_path->img_path;
                 }
-            }*/
 
             $news = News::where('id', $request->input('news_id'))
                 ->update(
@@ -198,7 +193,6 @@ class NewsController extends Controller
 
             $news = News::find($request->input('news_id'));
         }
-
         return response($news);
     }
 
@@ -224,8 +218,6 @@ class NewsController extends Controller
 
     public function newsCardImage($image)
     {
-
-
         try {
             dd(Storage::get('storage/'.$image));
             //dd( Storage::url('zFi0mS4NT3klbCx7VQ9oLyxTsY0AWoaHkOs2NZWS.jpeg'));

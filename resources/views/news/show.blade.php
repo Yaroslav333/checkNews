@@ -15,7 +15,7 @@
 
                     <div class="" style="word-wrap:break-word">
                         <h5 class="" id="card-title">{{$news->title}}</h5>
-                        <p><img id="card-img" src="/newsimg/{{ $news->img_path }}" alt="" class="rightimg">
+                        <p><img id="card-img" src="{{$img}}" alt="" class="rightimg">
                         <p id="card-body">{{$news->body}}</p>
                         </p>
                     </div>
