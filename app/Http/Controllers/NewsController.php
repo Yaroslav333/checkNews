@@ -214,12 +214,12 @@ class NewsController extends Controller
     public function newsCardImage($image)
     {
         try {
-            return Image::make(storage_path() . $image)->response();
+            return Image::make('public' . '/' . $image)->response();
         } catch(\Exception $e) {
             echo "<pre>";
             echo $e;
             echo "</pre>";
         }
-        return Image::make(storage_path() . $image)->response();
+        return Image::make('public' . '/' . $image)->response();
     }
 }
