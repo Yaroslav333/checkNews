@@ -32,7 +32,7 @@ class NewsController extends Controller
         Auth::user()->authorizeRoles(['admin']);
         $news =  News::all();
         foreach ($news as $row) {
-            //$row->img_path = isset($row->img_path) && !empty($row->img_path) ? Storage::disk('s3')->url($row->img_path) : null;
+            $row->img_path = isset($row->img_path) && !empty($row->img_path) ? Storage::disk('s3')->url($row->img_path) : null;
         }
         return view('news.index', ['news' => $news]);
     }
@@ -103,9 +103,7 @@ class NewsController extends Controller
         $img = null;
         try{
             if ($news->img_path !== null) {
-                //$img = Storage::disk('s3')->url($news->img_path);
-            } else {
-                $img = null;
+                $img = Storage::disk('s3')->url($news->img_path);
             }
         } catch (Exception $e) {
             dd($e);
