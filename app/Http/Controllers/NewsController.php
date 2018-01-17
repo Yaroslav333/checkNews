@@ -227,7 +227,7 @@ class NewsController extends Controller
 
 
         try {
-            dd(scandir('/app/storage/app/public'));
+            dd(scandir('/app'));
             //return Image::make(public_path('storage/' . $image))->response();
         } catch(\Exception $e) {
             echo "<pre>";
