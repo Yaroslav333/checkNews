@@ -102,7 +102,7 @@ class NewsController extends Controller
         $news = News::findOrFail($id);
         try{
             if ($news->img_path !== null) {
-                $img = Storage::disk('s3')->url($news->img_path);
+                //$img = Storage::disk('s3')->url($news->img_path);
             } else {
                 $img = null;
             }
