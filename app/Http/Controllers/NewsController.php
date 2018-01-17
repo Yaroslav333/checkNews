@@ -227,14 +227,14 @@ class NewsController extends Controller
 
 
         try {
-            dd( Storage::url('zFi0mS4NT3klbCx7VQ9oLyxTsY0AWoaHkOs2NZWS.jpeg'));
-            dd(scandir('/app/storage/app/public'));
+            //dd( Storage::url('zFi0mS4NT3klbCx7VQ9oLyxTsY0AWoaHkOs2NZWS.jpeg'));
+            //dd(scandir('/app/storage/app/public'));
             //return Image::make(public_path('storage/' . $image))->response();
         } catch(\Exception $e) {
             echo "<pre>";
             echo $e;
             echo "</pre>";
         }
-        return Image::make('storage' . '/' . $image)->response();
+        return Image::make('/storage' . '/' . $image)->response();
     }
 }
