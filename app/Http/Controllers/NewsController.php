@@ -68,10 +68,10 @@ class NewsController extends Controller
 
         $img = Image::make($request->file('card_img')->getRealPath());
 
-        return $img;
 
         if($request->file('card_img')) {
             $path = $request->file('card_img')->store('public');
+            return $path;
             $news->img_path = $path;
         } else {
             $news->img_path = null;
