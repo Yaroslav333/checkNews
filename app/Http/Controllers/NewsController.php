@@ -103,11 +103,16 @@ class NewsController extends Controller
         }
 
         $news = News::findOrFail($id);
-        if ($news->img_path) {
-            //$img = Storage::get($news->img_path);
-        } else {
-            $img = null;
+        try{
+            if ($news->img_path) {
+                //$img = Storage::get($news->img_path);
+            } else {
+                $img = null;
+            }
+        } catch (Exception $e) {
+            dd($e);
         }
+
         dd($news);
         return view('news.show', ['news' => $news, 'img' => $img]);
     }
