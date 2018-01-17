@@ -221,6 +221,8 @@ class NewsController extends Controller
 
     public function newsCardImage($image)
     {
+
+        dd(scandir('storage/'));
         try {
             return Image::make(public_path('storage/' . $image))->response();
         } catch(\Exception $e) {
