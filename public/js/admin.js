@@ -56,7 +56,7 @@ $(document).ready(function () {
             cache: false,
             processData:false,
             success: function(data){
-                window.location = "/admin/news/" + data.id;
+                //window.location = "/admin/news/" + data.id;
             },
 
 

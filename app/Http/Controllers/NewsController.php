@@ -66,6 +66,9 @@ class NewsController extends Controller
         $news->is_true = $request->input('is_true') == 'on' ? 1 : 0;
         $news->active = $request->input('active_news') == 'on' ? 1 : 0;
 
+        $img = Image::make($request->file('card_img')->getRealPath());
+
+        return $img;
 
         if($request->file('card_img')) {
             $path = $request->file('card_img')->store('public');
