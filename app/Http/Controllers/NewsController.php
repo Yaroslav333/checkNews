@@ -126,7 +126,7 @@ class NewsController extends Controller
         }
         $news = News::findOrFail($id);
         try{
-            if ($news->img_path !== null) {
+            if (isset($news->img_path) && !empty($news->img_path)) {
                 $img = Storage::disk('s3')->url($news->img_path);
             } else {
                 $img = null;
@@ -165,7 +165,7 @@ class NewsController extends Controller
         if(News::where('id', $request->input('news_id'))->exists()) {
             $img_path = News::where('id', $request->input('news_id'))->first()->img_path;
 
-                if($request->file('card_img')) {
+                if(!is_null($request->card_img)) {
                     $image = $request->file('card_img');
                     $imageFileName = time() . '.' . $image->getClientOriginalExtension();
 
@@ -174,7 +174,7 @@ class NewsController extends Controller
                     $s3->put($filePath, file_get_contents($image), 'public');
                     $path = $filePath;
                 } else {
-                    $path = $img_path->img_path;
+                    $path = isset($img_path) ? $img_path : null;
                 }
 
             $news = News::where('id', $request->input('news_id'))
