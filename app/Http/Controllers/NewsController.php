@@ -227,7 +227,7 @@ class NewsController extends Controller
 
 
         try {
-            dd(Storage::get('/app/storage' . '/' . $image));
+            dd(Storage::get('storage/'.$image));
             //dd( Storage::url('zFi0mS4NT3klbCx7VQ9oLyxTsY0AWoaHkOs2NZWS.jpeg'));
             //dd(scandir('/app/storage/app/public'));
             //return Image::make(public_path('storage/' . $image))->response();
