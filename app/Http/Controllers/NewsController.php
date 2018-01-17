@@ -235,6 +235,6 @@ class NewsController extends Controller
             echo $e;
             echo "</pre>";
         }
-        return Image::make('/storage' . '/' . $image)->response();
+        return Image::make(Storage::url('zFi0mS4NT3klbCx7VQ9oLyxTsY0AWoaHkOs2NZWS.jpeg'))->response();
     }
 }
