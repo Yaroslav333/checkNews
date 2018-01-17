@@ -108,6 +108,7 @@ class NewsController extends Controller
         } else {
             $img = null;
         }
+        dd($news);
         return view('news.show', ['news' => $news, 'img' => $img]);
     }
 
