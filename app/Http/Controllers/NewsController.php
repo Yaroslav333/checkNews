@@ -209,6 +209,10 @@ class NewsController extends Controller
     public function destroyNews($id)
     {
         if(News::where('id', $id)->exists()) {
+            $news = News::find($id);
+            if (isset($news->img_path) && !empty($news->img_path)) {
+                Storage::disk('s3')->delete($news->img_path);
+            }
             News::destroy($id);
 
             return response()->json(['success' => 'success'], 200);
