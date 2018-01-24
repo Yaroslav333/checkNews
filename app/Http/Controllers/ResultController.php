@@ -22,8 +22,6 @@ class ResultController extends Controller
     {
         $results = Result::all();
 
-        dd($results);
-
         $test_results = [];
         foreach ($results as $result) {
             if (isset($result->percent)) {
