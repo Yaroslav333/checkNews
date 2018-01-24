@@ -67,6 +67,8 @@ class ResultController extends Controller
      */
     public function store(Request $request)
     {
+
+        return 111;
         $resultArr = [
             '25' => 'result',
             '50' => 'result',
