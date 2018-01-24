@@ -81,12 +81,15 @@ class ResultController extends Controller
         foreach ($resultArr as $key => $type) {
             if (!Result::where('type', $type)->where('percent', $key)->exists()) {
 
+                return '111';
+
                 $result = new Result();
                 $result->type = $type;
                 $result->percent = $key;
                 $result->body = $request->input($key . '_' . $type);
                 $result->save();
             } else {
+                return '222';
                 Result::where('type', $type)->where('percent', $key)->update(['body' => $request->input($key . '_' . $type)]);
             }
         }
