@@ -16,6 +16,7 @@
         "league/flysystem-aws-s3-v3": "^1.0",
         "phpmailer/phpmailer": "^6.0",
         "swiftmailer/swiftmailer": "^6.0",
+        "unisharp/laravel-ckeditor": "^4.7",
         "watson/breadcrumbs": "^1.0"
     },
     "require-dev": {

@@ -64,6 +64,7 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="{{ asset('js/libs/material/materialize.min.js') }}"></script>
 <script src="{{ asset('js/admin.js') }}"></script>
+<script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
 
 </body>
 </html>

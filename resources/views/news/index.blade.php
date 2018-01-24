@@ -10,6 +10,7 @@
 @section('content')
     <div style="margin-top: 30px; margin-left: 20px;">
         <a href="/admin/news/create" class="waves-effect waves-light btn" style="background-color: #ff8905">Добавить Новость</a>
+        <a href="/admin/result" class="waves-effect waves-light btn" style="background-color: #ff8905; margin-left: 40px;">Результат теста</a>
     </div>
 
     <div class="row">

@@ -21,6 +21,7 @@ Route::get('/register', function () {
 
 Route::get('/', 'GameController@index');
 Route::get('/game/get-news', 'GameController@getNews');
+Route::get('get/result', 'ResultController@getTestResult');
 
 Route::get('newsimg/public/{image}', [
     'uses'      => 'NewsController@newsCardImage'
@@ -37,9 +38,11 @@ Route::get('/home', function () {
 Route::get('/admin', 'AdminController@index');
 Route::post('/admin/news/{id}', 'NewsController@updateNews');
 Route::post('/admin/news/delete/{id}', 'NewsController@destroyNews');
+Route::get('/admin/news/delete-img/{id}', 'NewsController@deleteImg');
 Route::get('/admin/mail', 'EmailController@mail');
 
 
 Route::resource('admin/news', 'NewsController');
 Route::resource('admin/users', 'UserController');
 Route::resource('admin/greetings', 'GreetingsController');
+Route::resource('admin/result', 'ResultController');

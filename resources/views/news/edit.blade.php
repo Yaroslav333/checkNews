@@ -31,6 +31,13 @@
                         <input class="file-path validate" type="text" value="{{substr($news->img_path, 5)}}">
                     </div>
                 </div>
+                <div>
+                    <a class="waves-effect waves-light btn-flat" id="delete-img-btn">Удалить Картинку</a>
+                </div>
+                <div class="progress" id="delete-img-progress" style="display: none;">
+                    <div class="indeterminate"></div>
+                </div>
+
                 <div class="input-field col s12">
                     <input value="{{$news->source}}" id="card-source-input" name="card-source-input" type="text" class="validate">
                     <label class="active" for="source">Ссылка на Источник</label>

@@ -176,8 +176,48 @@ $(document).ready(function () {
     });
 
     function getResult() {
-        $('#game-result').text('Ваш результат ' + goodAnswer + ' из ' + totalCount);
-        $('.game_result_box').show();
+
+        $.ajax({
+            type: "GET",
+            url: "/get/result",
+            contentType: false,
+            cache: false,
+            processData:false,
+            success: function(data){
+                console.log(data);
+                var result = Number(((goodAnswer/totalCount)*100).toFixed(2));
+
+                var percent = null;
+
+                if (result <= 25) {
+                    percent = 25;
+                } else if (result >= 26 && result <= 50) {
+                    percent = 50;
+                } else if (result >= 56 && result <= 75) {
+                    percent = 75;
+                } else if (result >= 76 && result <= 90) {
+                    percent = 90;
+                }else if (result >= 91) {
+                    percent = 100;
+                }
+
+                var test_result = null;
+                $.each(data, function (index, val) {
+                    if (index == percent) {
+                        $('#test_result').text(val);
+                    }
+                    if (index == 'info') {
+                        $('#test_info').html(val);
+                    }
+
+                });
+
+                $('#game-result').text('Ваш результат ' + goodAnswer + ' из ' + totalCount);
+                $('.game_result_box').show();
+
+            },
+        });
+
     }
 
 });

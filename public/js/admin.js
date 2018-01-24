@@ -47,6 +47,40 @@ $(document).ready(function () {
         }
     }
 
+    $('#remove-img-btn').on('click', function () {
+        $('#card-img-input').val(null);
+        $('#card-img')
+            .attr('src', '');
+        $('#card-img').hide();
+        $('.file-path').val('');
+    });
+
+
+    $('#delete-img-btn').on('click', function () {
+
+        if ($('.file-path').val() != '' && $('.file-path').val() != null) {
+            $('#delete-img-progress').show();
+            $.ajax({
+                type: "GET",
+                url: "/admin/news/delete-img/" + $('#news_id').val(),
+                contentType: false,
+                cache: false,
+                processData:false,
+                success: function(data){
+                    $('#card-img-input').val(null);
+                    $('#card-img')
+                        .attr('src', '');
+                    $('#card-img').hide();
+                    $('.file-path').val('');
+
+                    $('#delete-img-progress').hide();
+                },
+            });
+        }
+    });
+
+
+
     $('#store-news-form').submit(function () {
         $.ajax({
             type: "POST",
@@ -77,13 +111,10 @@ $(document).ready(function () {
             success: function(data){
                window.location = "/admin/news/" + data.id;
             },
-
-
         });
-
-
         return false;
     });
+
 
     $('.modal').modal();
 
@@ -181,11 +212,34 @@ $(document).ready(function () {
 
             });
         }
-
-
         return false;
-
     });
+
+    $('#store-result-form').submit(function () {
+        $.ajax({
+            type: "POST",
+            url: "/admin/result/",
+            data: new FormData(this), // Data sent to server, a set of key/value pairs (i.e. form fields and values)
+            contentType: false,
+            cache: false,
+            processData:false,
+            success: function(data){
+                window.location = "/admin/news/";
+            },
+        });
+        return false;
+    });
+
+    if (document.URL.split('/').length >= 4 && document.URL.split('/')[4] == 'result') {
+        var editor = CKEDITOR.replace( 'final_info' );
+        // The "change" event is fired whenever a change is made in the editor.
+        editor.on( 'change', function( evt ) {
+            // getData() returns CKEditor's HTML content.
+            console.log(evt.editor.getData());
+            $('#final_info').val(evt.editor.getData());
+        });
+    }
+
 
 });
 (function($){

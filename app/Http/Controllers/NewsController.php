@@ -102,7 +102,7 @@ class NewsController extends Controller
         $news = News::findOrFail($id);
         $img = null;
         try{
-            if ($news->img_path !== null) {
+            if ($news->img_path !== null && !empty($news->img_path)) {
                 $img = Storage::disk('s3')->url($news->img_path);
             }
         } catch (Exception $e) {
@@ -213,6 +213,20 @@ class NewsController extends Controller
 
             return response()->json(['success' => 'success'], 200);
         }
+    }
+
+    public function deleteImg($id)
+    {
+        $news = News::find($id);
+
+        if (isset($news->img_path) && !empty($news->img_path)) {
+            Storage::disk('s3')->delete($news->img_path);
+
+            $news->img_path = null;
+            $news->save;
+        }
+
+        return 1;
     }
 
     public function newsCardImage($image)

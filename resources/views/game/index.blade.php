@@ -43,6 +43,11 @@
                     <div class="card-content center-align">
                         <span class="card-title">Тест окончен</span>
                         <p id="game-result"></p>
+                        <p id="test_result"></p>
+                        <hr>
+                        <div id="test_info">
+
+                        </div>
                     </div>
                     <div class="card-action col s12 m12 l12">
                         <div style="text-align: center">

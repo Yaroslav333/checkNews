@@ -18,7 +18,7 @@
         </div>
         <div class="input-field col s12">
             <textarea id="card-body-input" class="materialize-textarea" name="card-body-input"></textarea>
-            <label for="textarea1">Содержание</label>
+            <label for="card-body-input">Содержание</label>
         </div>
         <div class="file-field input-field col s12">
             <div class="btn" style="background-color: #ff8905">
@@ -29,6 +29,10 @@
             <div class="file-path-wrapper">
                 <input class="file-path validate" type="text">
             </div>
+
+        </div>
+        <div>
+            <a class="waves-effect waves-light btn-flat" id="remove-img-btn">Удалить Картинку</a>
         </div>
         <div class="input-field col s12">
             <input value="" id="card-source-input" name="card-source-input" type="text" class="validate">
