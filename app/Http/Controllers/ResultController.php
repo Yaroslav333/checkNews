@@ -68,42 +68,51 @@ class ResultController extends Controller
     public function store(Request $request)
     {
 
-        $resultArr = [
-            '25' => 'result',
-            '50' => 'result',
-            '75' => 'result',
-            '90' => 'result',
-            '100' => 'result'
-        ];
+        try {
+            $resultArr = [
+                '25' => 'result',
+                '50' => 'result',
+                '75' => 'result',
+                '90' => 'result',
+                '100' => 'result'
+            ];
 
-       // return $request;
+            // return $request;
 
-        foreach ($resultArr as $key => $type) {
-            if (!Result::where('type', $type)->where('percent', $key)->exists()) {
+            foreach ($resultArr as $key => $type) {
+                if (!Result::where('type', $type)->where('percent', $key)->exists()) {
 
-                $result = new Result();
-                $result->type = $type;
-                $result->percent = $key;
-                $result->body = $request->input($key . '_' . $type);
-                $result->save();
-            } else {
-                Result::where('type', $type)->where('percent', $key)->update(['body' => $request->input($key . '_' . $type)]);
+                    $result = new Result();
+                    $result->type = $type;
+                    $result->percent = $key;
+                    $result->body = $request->input($key . '_' . $type);
+                    $result->save();
+                } else {
+                    Result::where('type', $type)->where('percent', $key)->update(['body' => $request->input($key . '_' . $type)]);
+                }
             }
+
+            //final info
+            if (!Result::where('type', 'final_info')->exists()) {
+                $info = new Result();
+                $info->type = 'final_info';
+                $info->body = $request->input("final_info");
+                $info->save();
+            } else {
+                Result::where('type', 'final_info')->update(['body' => $request->input("final_info")]);
+            }
+
+            return response()->json([
+                'status' => ''
+            ]);
+
+        } catch(\Exception $e) {
+            echo "<pre>";
+            echo $e;
+            echo "</pre>";
         }
 
-        //final info
-        if (!Result::where('type', 'final_info')->exists()) {
-            $info = new Result();
-            $info->type = 'final_info';
-            $info->body = $request->input("final_info");
-            $info->save();
-        } else {
-            Result::where('type', 'final_info')->update(['body' => $request->input("final_info")]);
-        }
 
-        return response()->json([
-            'status' => ''
-        ]);
 
     }
 
