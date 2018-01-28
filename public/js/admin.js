@@ -231,13 +231,13 @@ $(document).ready(function () {
     });
 
     if (document.URL.split('/').length >= 4 && document.URL.split('/')[4] == 'result') {
-        var editor = CKEDITOR.replace( 'final_info' );
+       /* var editor = CKEDITOR.replace( 'final_info' );
         // The "change" event is fired whenever a change is made in the editor.
         editor.on( 'change', function( evt ) {
             // getData() returns CKEditor's HTML content.
             console.log(evt.editor.getData());
             $('#final_info').val(evt.editor.getData());
-        });
+        });*/
     }
 
 
