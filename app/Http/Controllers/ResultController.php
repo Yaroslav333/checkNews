@@ -102,9 +102,8 @@ class ResultController extends Controller
                 Result::where('type', 'final_info')->update(['body' => $request->input("final_info")]);
             }
 
-            return response()->json([
-                'status' => ''
-            ]);
+            $results = Result::all();
+            return response($results);
 
         } catch(\Exception $e) {
             echo "<pre>";
