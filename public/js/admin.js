@@ -218,7 +218,7 @@ $(document).ready(function () {
     $('#store-result-form').submit(function () {
         $.ajax({
             type: "POST",
-            url: "/admin/result/",
+            url: "/admin/result",
             data: new FormData(this), // Data sent to server, a set of key/value pairs (i.e. form fields and values)
             contentType: false,
             cache: false,
