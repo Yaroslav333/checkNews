@@ -224,7 +224,7 @@ $(document).ready(function () {
             cache: false,
             processData:false,
             success: function(data){
-               // window.location = "/admin/news/";
+                window.location = "/admin/news/";
             },
         });
         return false;
