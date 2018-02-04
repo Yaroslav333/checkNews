@@ -54,7 +54,7 @@
                             <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false" data-size="large">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                         </div>
                         <div style="text-align: center">
-                            <div class="fb-share-button" data-href="" data-layout="button" data-size="large" data-mobile-iframe="false"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Поделиться</a></div>
+                            <div class="fb-share-button" data-href="" data-layout="button" data-size="large" data-mobile-iframe="false"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?p[title]=YOUR_TITLE&p[summary]=YOUR_SUMMARY&u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Поделиться</a></div>
                         </div>
                         <div class="right" style="margin-top: 10px;">
                           <a href="/" onclick="location.reload()" style="margin-right: 0px;"><i class="small material-icons">refresh</i></a>

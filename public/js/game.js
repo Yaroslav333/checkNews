@@ -99,10 +99,10 @@ $(document).ready(function () {
                // $('.rightimg').css('width', '40%');
             }
 
-            $('#game-card-img').show();
             $('#game-card-source').text(data[index].source);
             $('#game-card-source').attr('href', data[index].source);
             $('.game_news_card').css('left', '0px');
+            $('#game-card-img').show();
 
             $('.game_news_card').fadeIn( 100 );
             $('.game_button_box').fadeIn( 100 );

@@ -14,7 +14,7 @@ class EmailController extends Controller
         {
             $message->subject('Mailgun and Laravel are awesome!');
             $message->from('yarik1848@gmail.com', 'Website Name');
-            $message->to('johndoe@gmail.com');
+            $message->to('yarik1848@gmail.com');
         });
 
         dd(1);

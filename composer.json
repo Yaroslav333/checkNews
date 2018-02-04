@@ -17,7 +17,8 @@
         "phpmailer/phpmailer": "^6.0",
         "swiftmailer/swiftmailer": "^6.0",
         "unisharp/laravel-ckeditor": "^4.7",
-        "watson/breadcrumbs": "^1.0"
+        "watson/breadcrumbs": "^1.0",
+        "aws/aws-sdk-php": "~3.0"
     },
     "require-dev": {
         "filp/whoops": "~2.0",
