@@ -18,6 +18,7 @@
         }(document, 'script', 'facebook-jssdk'));</script>
     <div class="">
         <div class="row">
+            <p style="display: none" id="facebook_share"></p>
             <div class="col s10 m6 offset-s1 offset-m3 valign game_greetings" style=" margin-top: 20px;">
                 <div class="card">
                     <div class="card-content">

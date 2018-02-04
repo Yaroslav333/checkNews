@@ -213,6 +213,7 @@ $(document).ready(function () {
 
                 $('#game-result').text('Ваш результат ' + goodAnswer + ' из ' + totalCount);
 
+                $('#facebook_share').text($('#test_result').text());
                 $('.game_result_box').show();
 
             },
