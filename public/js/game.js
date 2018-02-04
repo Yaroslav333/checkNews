@@ -184,7 +184,6 @@ $(document).ready(function () {
             cache: false,
             processData:false,
             success: function(data){
-                console.log(data);
                 var result = Number(((goodAnswer/totalCount)*100).toFixed(2));
 
                 var percent = null;
@@ -214,7 +213,7 @@ $(document).ready(function () {
 
                 $('#game-result').text('Ваш результат ' + goodAnswer + ' из ' + totalCount);
 
-                $('meta[name=facebook]').attr('content', $('#test_result').text());
+                $('#facebook_share').text($('#test_result').text());
 
                 $('.game_result_box').show();
 

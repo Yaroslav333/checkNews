@@ -16,6 +16,7 @@
             js.src = 'https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.11';
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
+    <p id="facebook_share"></p>
     <div class="">
         <div class="row">
             <div class="col s10 m6 offset-s1 offset-m3 valign game_greetings" style=" margin-top: 20px;">
