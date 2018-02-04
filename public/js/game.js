@@ -213,7 +213,15 @@ $(document).ready(function () {
 
                 $('#game-result').text('Ваш результат ' + goodAnswer + ' из ' + totalCount);
 
-                $('#facebook_share').text($('#test_result').text());
+                document.getElementById('fb-share-button').onclick = function() {
+                    FB.ui({
+                        method: 'share',
+                        display: 'popup',
+                        quote:$('#test_result').text(),
+                        href: 'https://dev-check-news.herokuapp.com/',
+                    }, function(response){});
+                }
+
                 $('.game_result_box').show();
 
             },
