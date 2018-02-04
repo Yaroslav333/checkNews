@@ -104,7 +104,7 @@ $(document).ready(function () {
             $('.game_news_card').css('left', '0px');
 
             $('#game-card-img').show();
-
+            
 
 
             $('.game_news_card').fadeIn( 100 );

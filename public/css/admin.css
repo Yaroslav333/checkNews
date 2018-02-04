@@ -144,6 +144,45 @@ main {
 
 }
 
+
+.facebook {
+    background-color: #2e4a88;
+    box-shadow: 0 4px 0 #1B3D82;
+    text-shadow: 0 -1px -1px #1B3D82;
+
+    display: inline;
+    position: relative;
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    padding: 14px 80px;
+}
+.facebook:hover {
+    background-color: #354F84;
+}
+.facebook:active {
+    top: 2px;
+    box-shadow: 0 2px 0 #1B3D82;
+}
+.twitter {
+    background-color: #008DDE;
+    box-shadow: 0 4px 0 #0078BD;
+
+    display: inline;
+    position: relative;
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    padding: 14px 80px;
+}
 /*.input-field input[type=text]:focus + label {*/
     /*border-bottom: 1px solid  #ff8905;@important;*/
     /*box-shadow: 0 1px 0 0 #ff8905;@important;*/
