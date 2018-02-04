@@ -214,7 +214,7 @@ $(document).ready(function () {
 
                 $('#game-result').text('Ваш результат ' + goodAnswer + ' из ' + totalCount);
 
-                $('meta[name=author]').attr('content', $('#test_result').text(val));
+                $('meta[name=facebook]').attr('content', $('#test_result').text());
 
                 $('.game_result_box').show();
 
