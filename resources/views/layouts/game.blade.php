@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <meta property="og:url"           content="https://dev-check-news.herokuapp.com" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Your Website Title" />
+    <meta property="og:description"   content="Your description" />
+    <meta property="og:image"         content="hhttps://scontent.fhrk2-1.fna.fbcdn.net/v/t1.0-1/p50x50/11013362_1819892258235113_4920060360726235962_n.png?oh=60d18a026846a77e356266f8d0ce0d7c&oe=5ABC5DD9" />
+
     <meta name=”description” content="This is the description of my webpage that I really want to have shared on Facebook!" />
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">

@@ -102,7 +102,10 @@ $(document).ready(function () {
             $('#game-card-source').text(data[index].source);
             $('#game-card-source').attr('href', data[index].source);
             $('.game_news_card').css('left', '0px');
+
             $('#game-card-img').show();
+
+
 
             $('.game_news_card').fadeIn( 100 );
             $('.game_button_box').fadeIn( 100 );
@@ -213,14 +216,13 @@ $(document).ready(function () {
 
                 $('#game-result').text('Ваш результат ' + goodAnswer + ' из ' + totalCount);
 
-                document.getElementById('fb-share-button').onclick = function() {
-                    FB.ui({
-                        method: 'share',
-                        display: 'popup',
-                        quote:$('#test_result').text(),
-                        href: 'https://dev-check-news.herokuapp.com/',
-                    }, function(response){});
-                }
+                (function(d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) return;
+                    js = d.createElement(s); js.id = id;
+                    js.src = 'https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.11';
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
 
                 $('.game_result_box').show();
 

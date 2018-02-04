@@ -9,13 +9,6 @@
 
 @section('content')
     <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = 'https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.11';
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
     <div class="">
         <div class="row">
             <div class="col s10 m6 offset-s1 offset-m3 valign game_greetings" style=" margin-top: 20px;">
