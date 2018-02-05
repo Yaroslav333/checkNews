@@ -19,7 +19,7 @@ $(document).ready(function () {
     draggie.on( 'dragEnd', function( event, pointer) {
         if (draggie.position.x == 0) {
             $('#fake_icon').hide();
-           // $('#true_icon').hide();
+            $('#true_icon').hide();
         }
     });
 
