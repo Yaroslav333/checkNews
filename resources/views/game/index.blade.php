@@ -83,7 +83,7 @@
                         <div class="card-content " style="padding-left: 0px;padding-right: 0px;padding-top: 10px;">
                             <div class="" style="word-wrap:break-word">
                                 <h5 class="" id="game-card-title"></h5>
-                                <p><img id="game-card-img" src="" alt="" class="rightimg" style="display: none">
+                                <p><img id="game-card-img" src="" alt="" class="rightimg" style="display: none; margin-left: 0px;">
                                 <p id="game-card-body"></p>
                                 </p>
                             </div>
