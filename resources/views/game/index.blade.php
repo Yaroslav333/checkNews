@@ -63,7 +63,7 @@
 --}}
                             <div class="sosyal">
                                 <a href="#" class="facebook" id="fb-share-button" style="color: white">Facebook</a>
-                                <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter" data-show-count="false" data-size="large" style="color: white">Twitter</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                                <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter" data-show-count="false" data-size="large" target="_blank" style="color: white">Twitter</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                             </div>
                         </div>
                         <div class="right" style="margin-top: 10px;">
