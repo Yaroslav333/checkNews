@@ -61,5 +61,6 @@
 <script src="{{ asset('js/admin.js') }}"></script>
 <script src="{{ asset('js/game.js') }}"></script>
 <script src="https://unpkg.com/draggabilly@2/dist/draggabilly.pkgd.min.js"></script>
+<script type="text/javascript" src="//connect.facebook.net/en_US/sdk.js"></script>
 </body>
 </html>

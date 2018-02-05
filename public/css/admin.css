@@ -145,6 +145,9 @@ main {
 }
 
 
+.sosyal {
+    margin: 50px auto;
+}
 .facebook {
     background-color: #2e4a88;
     box-shadow: 0 4px 0 #1B3D82;
@@ -182,6 +185,13 @@ main {
     color: white;
     border-radius: 5px;
     padding: 14px 80px;
+}
+.twitter:active {
+    top: 2px;
+    box-shadow: 0 2px 0 #0078BD;
+}
+.twitter:hover {
+    background-color: #1397D8;
 }
 /*.input-field input[type=text]:focus + label {*/
     /*border-bottom: 1px solid  #ff8905;@important;*/

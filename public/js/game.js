@@ -1,3 +1,12 @@
+window.fbAsyncInit = function() {
+    FB.init({
+        appId            : '2024479127801150',
+        autoLogAppEvents : true,
+        xfbml            : true,
+        version          : 'v2.12'
+    });
+};
+
 $(document).ready(function () {
 
     var draggie = new Draggabilly( '.draggable', {
@@ -104,7 +113,7 @@ $(document).ready(function () {
             $('.game_news_card').css('left', '0px');
 
             $('#game-card-img').show();
-            
+
 
 
             $('.game_news_card').fadeIn( 100 );
@@ -216,13 +225,17 @@ $(document).ready(function () {
 
                 $('#game-result').text('Ваш результат ' + goodAnswer + ' из ' + totalCount);
 
-                (function(d, s, id) {
-                    var js, fjs = d.getElementsByTagName(s)[0];
-                    if (d.getElementById(id)) return;
-                    js = d.createElement(s); js.id = id;
-                    js.src = 'https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.11';
-                    fjs.parentNode.insertBefore(js, fjs);
-                }(document, 'script', 'facebook-jssdk'));
+
+
+
+                document.getElementById('fb-share-button').onclick = function() {
+                    FB.ui({
+                        method: 'share',
+                        display: 'popup',
+                        quote:'aaasasasa',
+                        href: 'https://dev-check-news.herokuapp.com/',
+                    }, function(response){});
+                }
 
                 $('.game_result_box').show();
 

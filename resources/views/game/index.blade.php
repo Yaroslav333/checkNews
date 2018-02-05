@@ -8,15 +8,15 @@
 @endsection
 
 @section('content')
-    <div id="fb-root"></div>
+   {{-- <div id="fb-root"></div>--}}
     <script>
-        (function(d, s, id) {
+        /*(function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
             js = d.createElement(s); js.id = id;
             js.src = 'https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.11';
             fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
+        }(document, 'script', 'facebook-jssdk'));*/
     </script>
     <div class="">
         <div class="row">
@@ -53,10 +53,18 @@
                     </div>
                     <div class="card-action col s12 m12 l12">
                         <div style="text-align: center">
+{{--
                             <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false" data-size="large">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+--}}
                         </div>
                         <div style="text-align: center">
+{{--
                             <div class="fb-share-button" id="fb-share-button" data-href="" data-layout="button" data-size="large" data-mobile-iframe="false"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Поделиться</a></div>
+--}}
+                            <div class="sosyal">
+                                <a href="#" class="facebook" id="fb-share-button" style="color: white">Facebook</a>
+                                <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter" data-show-count="false" data-size="large" style="color: white">Twitter</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                            </div>
                         </div>
                         <div class="right" style="margin-top: 10px;">
                           <a href="/" onclick="location.reload()" style="margin-right: 0px;"><i class="small material-icons">refresh</i></a>
@@ -120,13 +128,4 @@
             </div>
         </div>
     </div>
-    <script>
-        document.getElementById('fb-share-button').onclick = function() {
-            FB.ui({
-                method: 'share',
-                mobile_iframe: true,
-                href: 'https://developers.facebook.com/docs/',
-            }, function(response){});
-        };
-    </script>
 @endsection
