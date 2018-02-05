@@ -129,10 +129,11 @@ main {
     }
 
     .news_icon {
-        font-size: 16pt;!important;
+        font-size: 10pt;!important;
     }
     #news_icon{
-        margin-top: 35px;
+        margin-top: 40px;
+        font-size: 14pt;!important;
     }
 
     .game_card_content_box {

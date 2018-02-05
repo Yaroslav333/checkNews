@@ -76,7 +76,7 @@
 
             <div class="col s12 m12 l12 game_news_card">
                 <div class="col s1 m2 l2" style="margin-top:220px; text-align: center;">
-                    <a class="btn-floating btn-large waves-effect waves-light red" id="fake_icon" style="display: none"><i class="material-icons " id="news_icon" style="line-height: 0px;">Ложь</i></a>
+                    <a class="btn-floating btn-large waves-effect waves-light red" id="fake_icon" style="display: none"><i class="material-icons " id="news_icon" style="line-height: 0px;font-family: Arial, Helvetica, sans-serif;">Ложь</i></a>
                 </div>
                 <div class="col s9 m6 l6 offset-m1 offset-l1 valign game_news_card draggable" id="game_news_card" style="display: none; margin-top: 45px;padding-right: 0px;padding-left: 0px;">
                     <div class="col s12 m12 l12 card white darken-1 game_card_content_box" style="overflow-y:auto; border-radius: 7px; position: relative">
@@ -94,7 +94,7 @@
                     </div>
                 </div>
                 <div class="col s1 m2 l2 offset-m1 offset-l1" style="margin-top:220px;text-align: center;padding-left: 0px;">
-                    <a class="btn-floating btn-large waves-effect waves-light green" id="true_icon" style="display: none"><i class="material-icons" id="news_icon" style="line-height: 0px;">Правда</i></a>
+                    <a class="btn-floating btn-large waves-effect waves-light green" id="true_icon" style="display: none"><i class="material-icons" id="news_icon" style="line-height: 0px;font-family: Arial, Helvetica, sans-serif;">Правда</i></a>
                 </div>
             </div>
 
