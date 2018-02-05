@@ -101,7 +101,7 @@ $(document).ready(function () {
             $('#game-card-img').attr('src', data[index].img_path);
             $('#game-card-title').text(data[index].title);
             $('#game-card-body').text(data[index].body);
-            
+
             if (data[index].body == "" || data[index].body == null) {
                 $('.rightimg').css('width', '100%');
             } else {
