@@ -141,6 +141,18 @@ main {
 }
 
 
+@media (min-width: 455px) {
+    .game_card_content_box {
+        height: 400px;!important;
+    }
+}
+
+@media (max-width: 450px) {
+    .game_card_content_box {
+        height: 270px;!important;
+    }
+}
+
 
 .card-content{
     padding-left: 0px;!important;

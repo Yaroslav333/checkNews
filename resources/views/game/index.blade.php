@@ -79,7 +79,7 @@
                     <a class="btn-floating btn-large waves-effect waves-light red" id="fake_icon" style="display: none"><i class="material-icons " id="news_icon" style="line-height: 0px;">Ложь</i></a>
                 </div>
                 <div class="col s9 m6 l6 offset-m1 offset-l1 valign game_news_card draggable" id="game_news_card" style="display: none; margin-top: 45px;padding-right: 0px;padding-left: 0px;">
-                    <div class="col s12 m12 l12 card white darken-1 game_card_content_box" style="overflow-y:auto; height: 400px; border-radius: 7px; position: relative">
+                    <div class="col s12 m12 l12 card white darken-1 game_card_content_box" style="overflow-y:auto; border-radius: 7px; position: relative">
                         <div class="card-content " style="padding-left: 0px;padding-right: 0px;padding-top: 10px;">
                             <div class="" style="word-wrap:break-word">
                                 <h5 class="" id="game-card-title"></h5>
