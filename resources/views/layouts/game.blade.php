@@ -6,7 +6,8 @@
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="Check News" />
     <meta property="og:description"   content="You can put whatever text you like here" />
-    <meta property="og:image"         content="https://scontent.fhrk2-1.fna.fbcdn.net/v/t1.0-1/p50x50/11013362_1819892258235113_4920060360726235962_n.png?oh=60d18a026846a77e356266f8d0ce0d7c&oe=5ABC5DD9" />
+    <meta property="og:image"         content="https://scontent.fhrk2-1.fna.fbcdn.net/v/t1.0-1/p50x50/11013362_1819892258235113_4920060360726235962_n.png?oh=60d18a026846a77e356266f8d0ce0d7c&amp;oe=5ABC5DD9" />
+    <meta property="fb:app_id" content="2024479127801150"/>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
