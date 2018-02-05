@@ -98,10 +98,10 @@ $(document).ready(function () {
             getResult();
         } else {
             setItem(data[index]);
+            $('#game-card-img').attr('src', data[index].img_path);
             $('#game-card-title').text(data[index].title);
             $('#game-card-body').text(data[index].body);
-            $('#game-card-img').attr('src', data[index].img_path);
-
+            
             if (data[index].body == "" || data[index].body == null) {
                 $('.rightimg').css('width', '100%');
             } else {
@@ -224,15 +224,11 @@ $(document).ready(function () {
                 });
 
                 $('#game-result').text('Ваш результат ' + goodAnswer + ' из ' + totalCount);
-
-
-
-
                 document.getElementById('fb-share-button').onclick = function() {
                     FB.ui({
                         method: 'share',
                         display: 'popup',
-                        quote:'aaasasasa',
+                        quote:$('#test_result').text(),
                         href: 'https://dev-check-news.herokuapp.com/',
                     }, function(response){});
                 }
