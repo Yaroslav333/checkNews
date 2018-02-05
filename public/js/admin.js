@@ -177,13 +177,12 @@ $(document).ready(function () {
         var currentY = e.originalEvent.touches[0].clientY;
         if(currentY > lastY){
             //move down
-            $( ".game_card_content_box" ).scrollTop( scroll - 15 );
+            $( ".game_card_content_box" ).scrollTop( scroll - 10 );
         }else if(currentY < lastY){
             // moved up
-            $( ".game_card_content_box" ).scrollTop( scroll + 15 );
+            $( ".game_card_content_box" ).scrollTop( scroll + 10 );
         }
         lastY = currentY;
-        console.log(lastY);
 
        // $( ".game_card_content_box" ).scrollTop( yPos );
     });
