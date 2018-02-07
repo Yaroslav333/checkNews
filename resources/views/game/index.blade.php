@@ -102,7 +102,7 @@
                 </div>
             </div>
 
-            <div class="col s8 m6 offset-s2 offset-m3 valign card-message-box" style="display: none; margin-top: 20px;">
+            <div class="col s10 m6 offset-s1 offset-m3 valign card-message-box" style="display: none; margin-top: 20px;">
                 <div class="card">
                     <div class="card-content" style="word-wrap:break-word">
                         <span class="card-message-title"></span>
