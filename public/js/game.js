@@ -97,8 +97,8 @@ $(document).ready(function () {
         if(index < 0) {
             getResult();
         } else {
-            setItem(data[index]);
             $('#game-card-img').attr('src', data[index].img_path);
+            setItem(data[index]);
             $('#game-card-title').text(data[index].title);
             $('#game-card-body').text(data[index].body);
 
