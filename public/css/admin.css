@@ -171,7 +171,7 @@ main {
     box-shadow: 0 4px 0 #1B3D82;
     text-shadow: 0 -1px -1px #1B3D82;
 
-    display: inline;
+    display: block;
     position: relative;
     font-family: Arial;
     font-size: 14px;
@@ -180,7 +180,9 @@ main {
     text-decoration: none;
     color: white;
     border-radius: 5px;
-    padding: 14px 80px;
+    /*padding: 14px 35px;*/
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 .facebook:hover {
     background-color: #354F84;
@@ -193,7 +195,7 @@ main {
     background-color: #008DDE;
     box-shadow: 0 4px 0 #0078BD;
 
-    display: inline;
+    display: block;
     position: relative;
     font-family: Arial;
     font-size: 14px;
@@ -202,7 +204,9 @@ main {
     text-decoration: none;
     color: white;
     border-radius: 5px;
-    padding: 14px 80px;
+    /*padding: 14px 35px;*/
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 .twitter:active {
     top: 2px;

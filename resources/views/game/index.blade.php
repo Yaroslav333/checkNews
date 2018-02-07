@@ -40,9 +40,9 @@
             </div>
 
 
-            <div class="col s8 m6 offset-s2 offset-m3 valign game_result_box" style="display: none; margin-top: 20px;">
+            <div class="col s10 m6 offset-s1 offset-m3 valign game_result_box" style="display: none; margin-top: 20px;">
                 <div class="card">
-                    <div class="card-content center-align">
+                    <div class="card-content center-align" style="word-wrap:break-word;">
                         <span class="card-title">Тест окончен</span>
                         <p id="game-result"></p>
                         <p id="test_result"></p>
@@ -61,9 +61,13 @@
 {{--
                             <div class="fb-share-button" id="fb-share-button" data-href="" data-layout="button" data-size="large" data-mobile-iframe="false"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Поделиться</a></div>
 --}}
-                            <div class="sosyal">
-                                <a href="#" class="facebook" id="fb-share-button" style="color: white">Facebook</a>
-                                <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter" data-show-count="false" data-size="large" target="_blank" style="color: white">Twitter</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                            <div class="sosyal col s12 m12 l12" style="margin-left: 10px;">
+                                <div class="col s12 m6 l6" style="margin-top: 5px; margin-bottom: 5px;">
+                                    <a href="#" class="facebook" id="fb-share-button" style="color: white">Facebook</a>
+                                </div>
+                                <div class="col s12 m6 l6" style="margin-top: 5px; margin-bottom: 5px;">
+                                    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter" data-show-count="false" data-size="large" target="_blank" style="color: white">Twitter</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                                </div>
                             </div>
                         </div>
                         <div class="right" style="margin-top: 10px;">
