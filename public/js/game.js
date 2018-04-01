@@ -116,8 +116,8 @@ $(document).ready(function () {
 
 
 
-            $('.game_news_card').fadeIn( 100 );
-            $('.game_button_box').fadeIn( 100 );
+            $('.game_news_card').fadeIn( 500 );
+            $('.game_button_box').fadeIn( 500 );
             dragStop = true;
             $('.card').scrollTop( 0 );
             $('.game-counter').text(totalCount-index + '/' + totalCount);

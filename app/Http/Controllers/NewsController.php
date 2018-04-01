@@ -145,11 +145,6 @@ class NewsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
-        return 111;
-    }
-
 
     public function updateNews(Request $request)
     {
@@ -201,10 +196,6 @@ class NewsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
-        return 111;
-    }
 
     public function destroyNews($id)
     {
